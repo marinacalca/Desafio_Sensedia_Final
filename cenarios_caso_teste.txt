@@ -1,0 +1,52 @@
+﻿Levantamento dos cenários:
+
+1- O usuário deve realizar a autenticação no facebook.
+
+
+CT1 - Todos os campos válidos 
+Descrição: Caso de teste tem como objetivo o usuário realizar a autenticação no facebook.
+Pré-condição: Usuário informou e-mail e senha válidos que estão cadastrados no banco de dados.
+Pós-condição: Usuário fez login no facebook.
+Dados: Email e senha.
+
+CT2 - Usuário não cadastrado no banco de dados
+Descrição: Caso de teste tem como objetivo validar usuários não cadastrados no banco de dados.
+Pré-condição: Usuário informa email e senha que não estão cadastrados no banco de dados.
+Pós-condição: Mensagem de erro que o usuário não foi encontrado no sistema.
+Dados: Email e senha.
+
+CT3 - Usuário informa senha inválida
+Descrição: Esse caso de teste tem como objetivo validar quando o usuário digita senha inválida.
+Pré-condição: O usuário informa email correto e senha inválida.
+Pós-condição: Mensagem de erro que a senha está inválida e pergunta se o usuário esqueceu a senha?
+Dados: Email e senha
+
+CT4 - Usuário deixa os campos de email e senha em branco
+Descrição: Esse caso de teste tem como objetivo validar quando o usuário deixa em branco o email e senha.
+Pré-condição: O usuário não digita email e senha e clica no botão entrar.
+Pós-condição: Mensagem de erro que o usuário não digitou email e se ele gostaria de se cadastrar?
+Dados: Não inserir dados.
+
+
+2- O usuário deve postar uma mensagem na página desse mesmo usuário
+
+
+CT5 - Postar uma mensagem na página do próprio usuário
+Descrição: Esse caso de teste tem como objetivo realizar uma postagem do usuário. 
+Pré-condição: O usuário deve ter logado com sucesso.
+Pós-condição: O usuário consegue postar uma mensagem e consegue visualizar essa publicação.
+Dados: mensagem a ser publicada.
+
+CT6 - Postar a mesma mensagem que no post anterior
+Descrição: Esse caso de teste tem como objetivo validar se o usuário tem permissão para postar o mesmo conteúdo seguido. 
+Pré-condição: O usuário deve ter realizado o login e ter realizado um post identico ao de agora.
+Pós-condição: Mensagem de erro que o usuário não consegue postar atualização de status igual.
+Dados: mensagem a ser publicada igual a anterior.
+
+3- Realizar uma alteração do post acima
+
+CT7 - Alterar uma postagem feita pelo usuário
+Descrição: Esse caso de teste tem como objetivo alterar uma postagem feita pelo usuário. 
+Pré-condição: O usuário deve ter feito uma postagem na sua própria página.
+Pós-condição: O facebook altera a mensagem  da postagem do usuário.
+Dados: Mensagem do usuário a ser alterada e token válido
